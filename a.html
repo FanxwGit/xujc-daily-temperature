@@ -1,0 +1,78 @@
+<html>
+
+<head>
+
+	<style>
+		#box {
+			width: 100px;
+			height: 100px;
+			position: relative;
+			-webkit-transform-style: preserve-3d;
+			-webkit-animation: rotate 5s infinite linear;
+		}
+
+		@-webkit-keyframes rotate {
+			from {
+				-webkit-transform: rotateX(0deg) rotateY(0deg);
+			}
+
+			to {
+				-webkit-transform: rotateX(360deg) rotateY(360deg);
+			}
+		}
+
+		#box figure {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			left: 0;
+			top: 0;
+		}
+
+		#box .front {
+			-webkit-transform: rotateY(0deg) translateZ(50px);
+			background-color: #ccc;
+		}
+
+		#box .back {
+			-webkit-transform: rotateY(180deg) translateZ(50px);
+			background-color: #999;
+		}
+
+		#box .right {
+			-webkit-transform: rotateY(90deg) translateZ(50px);
+			background-color: #666;
+		}
+
+		#box .left {
+			-webkit-transform: rotateY(-90deg) translateZ(50px);
+			background-color: #333;
+		}
+
+		#box .top {
+			-webkit-transform: rotateX(90deg) translateZ(50px);
+			background-color: #111;
+		}
+
+		#box .bottom {
+			-webkit-transform: rotateX(-90deg) translateZ(50px);
+			background-color: #eee;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div id="box">
+		<figure class="front">Front</figure>
+		<figure class="back">Back</figure>
+		<figure class="right">Right</figure>
+		<figure class="left">Left</figure>
+		<figure class="top">Top</figure>
+		<figure class="bottom">Bottom</figure>
+	</div>
+
+</body>
+
+</html>
